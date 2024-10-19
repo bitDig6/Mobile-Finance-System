@@ -22,14 +22,17 @@ document.getElementById('btn-cash-out').addEventListener('click', function(event
         document.getElementById('account-balance').innerText = newBalance;
 
         //add to transaction history
-        const div = document.createElement('div');
-        div.classList.add('bg-yellow-100');
-        div.innerHTML =    `
-            <h4 class="text-2xl font-bold">Cash out</h4>
-            <p>${cashOut} Tk. withdraw. New Balance ${newBalance} Tk.</p>
-        `;
 
-        document.getElementById('transaction-container').appendChild(div);
+        transactionHistoryEntry(cashOut, newBalance, 'btn-cash-out');
+
+        // const div = document.createElement('div');
+        // div.classList.add('bg-yellow-100');
+        // div.innerHTML =    `
+        //     <h4 class="text-2xl font-bold">Cash out</h4>
+        //     <p>${cashOut} Tk. withdraw. New Balance ${newBalance} Tk.</p>
+        // `;
+
+        // document.getElementById('transaction-container').appendChild(div);
         // console.log(div);
 
     }else{

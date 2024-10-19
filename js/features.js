@@ -7,6 +7,10 @@ document.getElementById('show-cash-out-form').addEventListener('click', function
     showSectionById('cash-out-form');
 });
 
+document.getElementById('show-transfer-money-form').addEventListener('click', function(){
+    showSectionById('transfer-money-form');
+});
+
 document.getElementById('show-transaction-history').addEventListener('click', function(){
     showSectionById('transaction-section');
 });

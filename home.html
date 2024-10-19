@@ -26,6 +26,7 @@
                  <div>
                     <button id="show-add-money-form" class="btn btn-lg">Add Money</button>
                     <button id="show-cash-out-form" class="btn btn-lg">Cash Out</button>
+                    <button id="show-transfer-money-form" class="btn btn-lg">Transfer Money</button>
                     <button id="show-transaction-history" class="btn btn-lg">Transactions</button>
                  </div>
                 <!-- features end -->
@@ -75,12 +76,33 @@
                 </div>
                 <!-- cash out form end -->
 
+                <!-- transfer money form start -->
+                <div id="transfer-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Transfer Amount</span>
+                      </label>
+                      <input id="input-send-money" type="text" placeholder="Enter Amount to Transfer" class="input input-bordered" required autocomplete="off"/>
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin Number</span>
+                      </label>
+                      <input id="input-send-money-pin" type="password" placeholder="Enter 4 Digit Pin Number" class="input input-bordered" required  autocomplete="off"/>
+                    </div>
+                    <div class="form-control mt-6">
+                      <button id="btn-send-money" class="btn btn-primary">Send Now</button>
+                    </div>
+                  </form>
+                </div>
+                <!-- transfer money form end -->
+
                 <!-- transaction start -->
                  <div id="transaction-section" class="hidden">
                   <h2 class="text-3xl text-center">Transactions History</h2>
                   <div id="transaction-container" class="space-y-3">
-                    <!-- we wii keep appending or injecting add money or cash out here -->
-                    
+                    <!-- we wii keep appending or injecting add money or cash out here --> 
                   </div>
                  </div>
                 <!-- transaction end -->
@@ -91,6 +113,7 @@
     <script src="js/utilities.js"></script>
     <script src="js/addMoney.js"></script>
     <script src="js/cashOut.js"></script>
+    <script src="js/transferMoney.js"></script>
     <script src="js/features.js"></script>
 </body>
 </html>

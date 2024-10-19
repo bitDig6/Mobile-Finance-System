@@ -27,12 +27,14 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
 
         document.getElementById('account-balance').innerText = newBalance;
 
-        const p = document.createElement('p');
-        p.innerText =  `Added ${addMoney} Tk. Balance: ${newBalance}`;
-        console.log(p);
+        transactionHistoryEntry(addMoney, newBalance, 'btn-add-money')
+
+        // const p = document.createElement('p');
+        // p.innerText =  `Added ${addMoney} Tk. Balance: ${newBalance}`;
+        // console.log(p);
 
         //should be a common function
-        // document.getElementById('transaction-container').appendChild(p);
+        //document.getElementById('transaction-container').appendChild(p);
 
         // console.log(newBalance);
     }else{
